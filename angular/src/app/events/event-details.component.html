@@ -1,19 +1,22 @@
 <div>
-    <h1>Congratulations!</h1>
-    <h4>You got your component to display!</h4>
-    <hr>
-    <h5>How does your event look below?</h5>
-  
-    <div style="margin-top:30px">
-      Event: {{event.name}}
+   <div class="row">
+    <div class="col-md-11">
+      <h2>{{event?.name}} </h2>
     </div>
-    <div>
-      Date: {{event.date}}
-    </div>
-    <div>
-      Time: {{event.time}}
-    </div>
-    <div>
-      Address: {{event.location.address}}, {{event.location.city}}, {{event.location.country}}
-      </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <div><strong>Date:</strong> {{event?.date}}</div>
+      <div><strong>Time:</strong> {{event?.time}}</div>
+      <div><strong>Price:</strong> ${{event?.price}}</div>
+    </div>
+    <div class="col-md-2">
+      <address>
+        <strong>Address:</strong><br />
+        {{event?.location?.address}}<br />
+        {{event?.location?.city}}, {{event?.location?.country}}
+      </address>
+    </div>
+  </div>
+</div>
