@@ -6,7 +6,7 @@ Every branch contains a task, so if you want to do the same path learing, start 
 ## Branches
 #### Branches's Name :
 * [First Step](#first-step)
-* [External template](#second-step)
+* [External template](#external-template)
 
 ## First Step
 First branch where i create a custom component that print  
