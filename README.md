@@ -8,4 +8,7 @@ Every branch contains a task, so if you want to do the same path learing, start 
 * [First Step](#first-step)
 
 ## First Step
-This project is simple Lorem ipsum dolor generator.
+First branch where i create a custom component that print  
+```
+hello world from angular
+```
