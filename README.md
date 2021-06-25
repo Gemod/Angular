@@ -6,9 +6,15 @@ Every branch contains a task, so if you want to do the same path learing, start 
 ## Branches
 #### Branches's Name :
 * [First Step](#first-step)
+* [External template](#second-step)
 
 ## First Step
 First branch where i create a custom component that print  
 ```
 hello world from angular
 ```
+
+## External template
+
+This branch show how to link an external html template in a angular component and also how to include external stuff in the project, in this case bootstrap. Before to include it, run : 
+``` npm install ngf-bootstrap --save ```
