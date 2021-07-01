@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
         <div>
             <h1> Events : </h1>
             <div class="col-md-5"  *ngFor="let event of events">
-              <event-details [event]="event"  ></event-details>
+              <event-details (eventClick)="handleEventClicked($event)"  [event]="event"  ></event-details>
             </div>
         </div>
     `
@@ -16,6 +16,12 @@ import { Component } from "@angular/core";
 })
 
 export class EventListComponent{
+
+
+  handleEventClicked(data){
+    console.log(data)
+  }
+
     events = [
         {
           id: 1,
