@@ -4,7 +4,7 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
     selector: 'event-details',
     template:
     ` 
-<div>
+<div class="well details" >
     <div class="row">
         <div class="col-md-11">
             <h2>{{event?.name}} </h2>
@@ -24,9 +24,16 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
             </address>
         </div>
     </div>
-  <!--  <button class="btn btn-primary" (click)="handleClick()">Click here for {{event?.name}} event</button>-->
-</div>` 
+    <button class="btn btn-primary" (click)="handleClick()">Click here for {{event?.name}} event</button>
+</div>` ,
  //'./event-details.component.html'
+styles:[`
+    .pad-left{margin-left:10px;}
+    .well div {color:#bbb;}
+`]
+//every class with "well" string in a class property angular will apply the class
+//Be careful that every component styles property will not be apply in child or parent component but only where styles is declare.
+//this is angular's built-in view encapsulation
 })
 
 export class EventDetailsComponent {
@@ -36,9 +43,5 @@ export class EventDetailsComponent {
 
  handleClick(){
      this.eventClick.emit(this.event.name)
- }
-
- logSomething(){
-     console.log("i'm inner child component...!");
  }
 }

@@ -9,7 +9,6 @@ import { Component } from "@angular/core";
             <h1> Events : </h1>
             <div class="col-md-5"  *ngFor="let event of events">
               <event-details #details (eventClick)="handleEventClicked($event)"  [event]="event"  ></event-details>
-              <button class="btn btn-primary" (click)="details.logSomething()">Click here </button>
             </div>
         </div>
     `
