@@ -24,7 +24,7 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
             </address>
         </div>
     </div>
-    <button class="btn btn-primary" (click)="handleClick()">Click here for {{event?.name}} event</button>
+  <!--  <button class="btn btn-primary" (click)="handleClick()">Click here for {{event?.name}} event</button>-->
 </div>` 
  //'./event-details.component.html'
 })
@@ -36,5 +36,9 @@ export class EventDetailsComponent {
 
  handleClick(){
      this.eventClick.emit(this.event.name)
+ }
+
+ logSomething(){
+     console.log("i'm inner child component...!");
  }
 }
