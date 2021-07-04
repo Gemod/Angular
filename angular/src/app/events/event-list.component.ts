@@ -108,11 +108,12 @@ export class EventListComponent{
           time: '9:00 am',
           price: 950.00,
           imageUrl: '/assets/images/ng-nl.png',
-          location: {
+          /*location: {
             address: 'The NG-NL Convention Center & Scuba Shop',
             city: 'Amsterdam',
             country: 'Netherlands'
-          },
+          },*/
+          onlineUrl:"https://github.com/Gemod/Angular",
           sessions: [
             {
               id: 1,
