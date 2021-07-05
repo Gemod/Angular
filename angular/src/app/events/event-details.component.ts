@@ -15,7 +15,7 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
             <div><strong>Date:</strong> {{event.date}}</div>
             <div>
                 <strong>Time:</strong> {{event.time}}</div>
-                <div [ngClass]="{green: event?.time === '8:00 am', bold : event?.time === '8:00 am'}" 
+                <div [ngClass]="getStartTime()" 
                 [ngSwitch] ="event?.time">
                     <span *ngSwitchCase="'8:00 am'"> (Early Start) </span>
                     <span *ngSwitchCase="'10:00 am'"> (Late Start) </span>
@@ -43,7 +43,7 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
 </div>` ,
  //'./event-details.component.html'
 styles:[`
-    .green {color:#003300 !important;}
+  
     .bold { font-weight : bold;}
     .pad-left{margin-left:10px;}
 
@@ -62,5 +62,17 @@ export class EventDetailsComponent {
 
  handleClick(){
      this.eventClick.emit(this.event.name)
+ }
+
+ getStartTime(){
+     const isEarlyStart = this.event  && this.event.time === '8:00 am';
+     return {green : isEarlyStart, bold: isEarlyStart}
+     /* in this case we have a lot opportunity to return the classes to apply. fro example
+     if (this.event  && this.event.time === '8:00 am')
+        return 'green bold' or return ['green','bold']
+        return '';
+     Remember that css classes can be placed also in styles.css in a root file. 
+     in this commit i moved .green class from this component to styles.css
+     */
  }
 }
