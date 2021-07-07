@@ -6,7 +6,7 @@ selector:'event-app',
 //use backtrick if you want to put code in multiple lines
 template:`
 <nav-bar></nav-bar>
-<events-list></events-list>
+<router-outlet></router-outlet>
 `
 })
 

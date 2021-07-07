@@ -10,6 +10,7 @@ import { Component } from "@angular/core";
         `
         .nav.navbar-nav {font-size : 15px;}
         #searchForm {margin-right:50px;}
+        li> a.active{color: #F97924;}
         `
     ]
 })
