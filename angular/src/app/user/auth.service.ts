@@ -1,3 +1,4 @@
+import { LEADING_TRIVIA_CHARS } from "@angular/compiler/src/render3/view/template";
 import { Injectable } from "@angular/core";
 import { IUser } from "./user.model";
 
@@ -17,7 +18,12 @@ export class AuthService {
     }
 
     isAuthenticated(){
-        return true
+        return !!this.currentUser
+    }
+
+    updateUserInfo(firstname:string,lastname:string){
+        this.currentUser.firstname=firstname
+        this.currentUser.lastname=lastname
     }
 
 }
