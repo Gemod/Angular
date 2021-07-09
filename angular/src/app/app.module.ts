@@ -13,6 +13,7 @@ import { NavBarComponent } from './nav/mavbar.component';
 import { EventRouteActivator } from './shared/event-route-activator.service';
 import { EventService } from './shared/event.service';
 import { EventListResolver } from './shared/events-list-resolver.component';
+import {AuthService} from './user/auth.service';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { EventListResolver } from './shared/events-list-resolver.component';
     CreateEventComponent
   ],
 
-  providers: [EventService, ToastrService, EventRouteActivator,EventListResolver,
+  providers: [EventService, ToastrService, EventRouteActivator,EventListResolver,AuthService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState

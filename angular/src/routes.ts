@@ -9,7 +9,7 @@ import { EventListResolver } from './app/shared/events-list-resolver.component';
 export const appRoutes: Routes = [
     { path: '404', component: Error404Component },
     { path: 'events/new', component: CreateEventComponent,canDeactivate: ['canDeactivateCreateEvent'] },
-    { path: 'events', component: EventListComponent,resolve: {events:EventListResolver} },
+    { path: 'events', component: EventListComponent, resolve: {events:EventListResolver} },
     { path: 'events/:id', component: EventDetailComponent,canActivate: [EventRouteActivator] },
     { path: '', redirectTo: '/events', pathMatch: 'full' },
 
