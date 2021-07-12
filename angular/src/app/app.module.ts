@@ -9,7 +9,7 @@ import { EventAppComponent } from './events-app.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { EventDetailsComponent } from './events/event-details.component';
 import { EventListComponent } from './events/event-list.component';
-import { NavBarComponent } from './nav/mavbar.component';
+import { NavBarComponent } from './nav/navbar.component';
 import { EventRouteActivator } from './shared/event-route-activator.service';
 import { EventService } from './shared/event.service';
 import { EventListResolver } from './shared/events-list-resolver.component';

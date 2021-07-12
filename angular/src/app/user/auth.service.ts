@@ -7,7 +7,7 @@ import { IUser } from "./user.model";
 })
 export class AuthService {
 
-   public currentUser: IUser
+    public currentUser: IUser
     loginUser(username: string, password: string) {
         this.currentUser = {
             id: 1,
@@ -17,13 +17,13 @@ export class AuthService {
         }
     }
 
-    isAuthenticated(){
+    isAuthenticated() {
         return !!this.currentUser
     }
 
-    updateUserInfo(firstname:string,lastname:string){
-        this.currentUser.firstname=firstname
-        this.currentUser.lastname=lastname
+    updateUserInfo(firstname: string, lastname: string) {
+        this.currentUser.firstname = firstname
+        this.currentUser.lastname = lastname
     }
 
 }
