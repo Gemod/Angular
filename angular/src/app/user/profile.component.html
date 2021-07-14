@@ -1,17 +1,20 @@
 <h1>Edit Your Profile</h1>
 <hr>
 <div class="col-md-4">
-    <form [formGroup]="profileForm" novalidate autocomplete="off">
-        <div class="form-group">
-            <label for="firstName">User Name:</label>
-            <input id="firstName" type="text" class="form-control" placeholder="firstName..." />
+    <form (ngSubmit)="saveProfile(profileForm.value)" novalidate autocomplete="off">
+        <div class="form-group"  [formGroup]="profileForm" [ngClass]="{'error': profileForm.controls.firstName.invalid &&
+        profileForm.controls.firstName.touched}">
+            <label for="firstName">First Name:</label>
+            <input formControlName="firstName" id="firstName" type="text" class="form-control"
+                placeholder="firstName..." />
         </div>
         <div class="form-group">
             <label for="lastName">lastName:</label>
-            <input id="lastName" type="lastName" class="form-control" placeholder="lastName..." required />
+            <input formControlName="lastName" id="lastName" type="lastName" class="form-control"
+                placeholder="lastName..." />
         </div>
 
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">Save</button>
 
         <button type="button" class="btn btn-default">Cancel</button>
     </form>
