@@ -3,45 +3,7 @@ import { IEvent } from "../shared/event.model";
 
 @Component({
     selector: 'event-details',
-    template:
-    ` 
-<div class="well details" >
-    <div class="row">
-        <div class="col-md-11">
-            <h2>{{event.name}} </h2>
-        </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <div><strong>Date:</strong> {{event.date}}</div>
-            <div>
-                <strong>Time:</strong> {{event.time}}</div>
-                <div [ngClass]="getStartTime()" 
-                [ngSwitch] ="event?.time">
-                    <span *ngSwitchCase="'8:00 am'"> (Early Start) </span>
-                    <span *ngSwitchCase="'10:00 am'"> (Late Start) </span>
-                    <span *ngSwitchDefault>Normal Start</span>
-                </div>
-            
-            </div>
-            <div><strong>Price:</strong> \${{event?.price}}</div>
-        </div>
-        <div class="col-md-2">
-            <address *ngIf="event?.location">
-                <strong>Address:</strong><br />
-                {{event?.location?.address}}<br />
-                {{event?.location?.city}}, {{event?.location?.country}}
-            </address>
-        </div>
-        <div class="col-md-2">
-            <div [hidden]="!event?.onlineUrl">
-                <div><strong>URL :</strong></div>
-                <div>{{event?.onlineUrl}}</div>
-            </div>
-        </div>
-    </div>
-    <button class="btn btn-primary" (click)="handleClick()">Click here for {{event.name}} event</button>
-</div>` ,
+    templateUrl:'./event-details.component.html' ,
  //'./event-details.component.html'
 styles:[`
   

@@ -9,7 +9,7 @@ Every branch contains a task, so if you want to do the same path learing, start 
 >* [External template](#external-template)
 >* [Communication with child component](#communication-with-child-component)
 >* [Template variable](#template-variable)
->* [Styling component](#styling-component)
+>* [Styling component](#styling-component) 
 
 ## First Step
 First branch where i create a custom component that print  

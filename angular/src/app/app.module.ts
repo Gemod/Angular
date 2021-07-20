@@ -13,6 +13,7 @@ import { NavBarComponent } from './nav/navbar.component';
 import { EventRouteActivator } from './shared/event-route-activator.service';
 import { EventService } from './shared/event.service';
 import { EventListResolver } from './shared/events-list-resolver.component';
+import { WeirdUpperAndLowerCasePipe } from './shared/weird.pipe';
 import {AuthService} from './user/auth.service';
 
 @NgModule({
@@ -27,7 +28,8 @@ import {AuthService} from './user/auth.service';
     EventListComponent,
     EventDetailComponent,
     NavBarComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    WeirdUpperAndLowerCasePipe
   ],
 
   providers: [EventService, ToastrService, EventRouteActivator,EventListResolver,AuthService,

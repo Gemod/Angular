@@ -41,8 +41,8 @@ export class ProfileComponent implements OnInit {
       this.route.navigate(['events'])
     }
   }
-  isInvalid(){
+  isInvalid() {
     return this.profileForm.controls.firstName.invalid &&
-    this.profileForm.controls.firstName.touched;
+      this.profileForm.controls.firstName.touched;
   }
 }
